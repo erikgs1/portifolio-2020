@@ -13,8 +13,14 @@ header {
     width: 100%;
     min-height: 768px;
     background-color: yellow;
+    nav{
+        display: none;
+    }
     .my-name{
-        font-size: 40rem;
-        text-align: center;
+        h1{
+            font-size: 15rem;
+            text-align: center;
+            text-transform: uppercase;
+        }
     }
 }
