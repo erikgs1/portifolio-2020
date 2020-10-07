@@ -11,7 +11,7 @@ body{
 }
 header {
     width: 100%;
-    min-height: 768px;
+    min-height: 100vh;
     background-color: yellow;
     nav{
         display: none;
@@ -54,9 +54,23 @@ main{
         height: 255px;
         background-color: black;
         &:hover{
-            transition:all 1s ease;
+            transition:all 0.8s ease;
             opacity: 0.5;
         }
     }
-    
+}
+
+
+footer{
+    width: 100%;
+    .picture{
+        width: 255px;
+        height: 255px;
+        background-color: black;
+        border-radius: 122px;
+        float: right;
+    }
+    .about{
+        text-align: left;
+    }
 }
