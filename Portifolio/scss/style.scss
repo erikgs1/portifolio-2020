@@ -24,3 +24,39 @@ header {
         }
     }
 }
+
+main{
+    margin: 50px 0;
+    nav{
+        width: 100%;
+        float: left;
+        ul{
+            width: 100%;
+            float: left;
+            li{
+                width: 100px;
+                float: left;
+                color: white;
+                background-color: black;
+                border-radius: 10px;
+                padding: 7px;
+                text-align: center;
+                margin-right: 10px;
+            }
+            :hover{
+                background-color: yellow;
+                color: black;
+            }
+        }
+    }
+    .exemple-box{
+        width: 255px;
+        height: 255px;
+        background-color: black;
+        &:hover{
+            transition:all 1s ease;
+            opacity: 0.5;
+        }
+    }
+    
+}
