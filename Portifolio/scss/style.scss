@@ -1,0 +1,20 @@
+/* RESET */
+*{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+/* RESET */
+body{
+    font-size: 16px;
+}
+header {
+    width: 100%;
+    min-height: 768px;
+    background-color: yellow;
+    .my-name{
+        font-size: 40rem;
+        text-align: center;
+    }
+}
