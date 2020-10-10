@@ -1,3 +1,5 @@
+@import "colors";
+
 /* RESET */
 *{
     padding: 0;
@@ -29,7 +31,7 @@ body{
 header {
     width: 100%;
     min-height: 100vh;
-    background-color: yellow;
+    background-color: $colorTheme;
     nav{
         display: none;
     }
@@ -40,22 +42,24 @@ header {
             text-transform: uppercase;
             position: relative;
             z-index: 2;
+            color: $white;
             @extend %no-text-select-all;
             span{
                 position: relative;
                 display: inline-block;
                 @extend %transform-horizontal-flip;
                 @extend %no-text-select-all;
+                color: $white;
                 &::before{
                     content: "";
                     position: absolute;
                     width: 15rem;
                     height: 15rem;
-                    background-color: white;
+                    background-color: $secondColorTheme;
                     border-radius: 7.5rem;
                     z-index: -1;
                     left: 50%;
-                    margin-left: -7brem;
+                    margin-left: -7rem;
                     top: 50%;
                     margin-top: -6.5rem;
                 }
@@ -74,18 +78,19 @@ main{
             float: left;
             margin: 0;
             li{
-                width: 100px;
+                min-width: 100px;
                 float: left;
-                color: white;
-                background-color: black;
-                border-radius: 10px;
-                padding: 7px;
+                color: $white;
+                background-color: $colorTheme;
+                border-radius: 3px;
+                padding: 7px 12px;
                 text-align: center;
-                margin:0  10px 50px 0 ;
+                margin: 0  10px 50px 0 ;
             }
             :hover{
-                background-color: yellow;
-                color: black;
+                background-color: $secondColorTheme;
+                transition: 1s;
+                color: $white;
             }
         }
     }
@@ -95,11 +100,28 @@ main{
         .box-image{
             width: 251px;
             height: 255px;
-            background-color: black;
+            background-color: $colorTheme;
+            position: relative;
+            &::before{
+                content: "";
+                width: 251px;
+                height: 255px;
+                background-color: $colorTheme;
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+                &:hover{
+                    transition:all 0.8s ease;
+                    opacity: 1;
+                }
+            }
             &:hover{
                 transition:all 0.8s ease;
                 opacity: 0.5;
             }
+            
+            
             img{
                 width: 251px;
                 height: 255px;
@@ -119,7 +141,7 @@ footer{
         width: 255px;
         height: 255px;
         margin: 50px 0;
-        background-color: black;
+        background-color: $colorTheme;
         border-radius: 122px;
         float: right;
     }
@@ -131,6 +153,6 @@ footer{
         width: 100%;
         height: 100px;
         margin-top: 50px;
-        background-color: black;
+        background-color: $colorTheme;
     }
 }
