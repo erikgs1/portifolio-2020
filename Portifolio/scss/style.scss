@@ -78,19 +78,26 @@ main{
             float: left;
             margin: 0;
             li{
-                min-width: 100px;
                 float: left;
-                color: $white;
-                background-color: $colorTheme;
-                border-radius: 3px;
-                padding: 7px 12px;
+                min-width: 100px;
                 text-align: center;
                 margin: 0  10px 50px 0 ;
-            }
-            :hover{
-                background-color: $secondColorTheme;
-                transition: 1s;
-                color: $white;
+                
+                a{
+                    color: $white;
+                    background-color: $colorTheme;
+                    border-radius: 3px;
+                    padding: 7px 12px;
+                    display: block;
+                    box-shadow: 0 5px 7px -1px $black;
+                    &:hover{
+                        color: $white;
+                        text-decoration: none;  
+                        background-color: $secondColorTheme;
+                        box-shadow: 0 5px 10px -1px $secondColorTheme;
+                    }
+                }
+                
             }
         }
     }
