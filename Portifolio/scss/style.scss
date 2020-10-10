@@ -44,7 +44,7 @@ header {
             span{
                 position: relative;
                 display: inline-block;
-                @include %transform-horizontal-flip;
+                @extend %transform-horizontal-flip;
                 @extend %no-text-select-all;
                 &::before{
                     content: "";
@@ -55,7 +55,7 @@ header {
                     border-radius: 7.5rem;
                     z-index: -1;
                     left: 50%;
-                    margin-left: -7.5rem;
+                    margin-left: -7brem;
                     top: 50%;
                     margin-top: -6.5rem;
                 }
@@ -99,6 +99,10 @@ main{
             &:hover{
                 transition:all 0.8s ease;
                 opacity: 0.5;
+            }
+            img{
+                width: 251px;
+                height: 255px;
             }
         }
         .box-title{
