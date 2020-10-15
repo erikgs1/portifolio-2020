@@ -219,3 +219,10 @@
         }
     }
  }
+ @include media-breakpoint-only(lx) {
+    footer {
+        .about{
+            margin: 70px 0;
+        }
+    }
+ }
