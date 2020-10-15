@@ -1,6 +1,5 @@
 @import "colors";
 @import "node_modules/bootstrap/scss/bootstrap";
-@import "responsive";
 /* RESET */
 *{
     padding: 0;
@@ -47,6 +46,7 @@ header{
                 display: none;
             }
             .my-name{
+                margin-left: 20px;
                 h1{
                     font-size: 250px;
                     text-align: center;
@@ -130,7 +130,8 @@ main{
         .box-title{
             text-align: center;
             padding: 20px 0;
-        }&:hover{
+        }
+        &:hover{
             position: absolute;
             top: -20px;
             box-shadow: 0 10px 25px -20px $black;
@@ -163,3 +164,5 @@ footer{
         background-color: $colorTheme;
     }
 }
+
+@import "responsive";

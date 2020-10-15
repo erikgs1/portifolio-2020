@@ -5,19 +5,45 @@
             .header-content{
                 .my-name{
                     h1{
-                        font-size: 100px !important;
+                        font-size: 100px;
                         span{
                             &::before{
-                                width: 100px !important;
-                                height: 100px !important;    
+                                width: 100px;
+                                height: 100px ;    
                                 left: 50%;
                                 top: 50%;
-                                margin-left: -48px !important;   
-                                margin-top: -44px !important;  
+                                margin-left: -48px;   
+                                margin-top: -44px;  
                             }
                         }
                     }
                 }
+            }
+        }
+    }
+    main{
+        padding: 20px 0;
+        nav{
+            ul{
+                li{
+                    min-width: 70px;
+                    margin: 0 5px 30px 3px;
+                    a{
+                        font-size: 10px;
+                        padding: 5px 5px;
+                    }
+                }
+            }
+        }
+        .exemple-box{
+            .box-image{
+                width: 100%;
+                height: auto;
+            }
+            &:hover{
+                position: static;
+                top: 0;
+                box-shadow: none;
             }
         }
     }
