@@ -1,5 +1,44 @@
 @import "node_modules/bootstrap/scss/bootstrap";
-@include media-breakpoint-only(xs) {
+
+@media only screen and (max-width: 320px) {
+    header{
+        a{
+            .header-content{
+                .my-name{
+                    h1{
+                        font-size: 80px;
+                        span{
+                            &::before{
+                                width: 80px;
+                                height: 80px ;    
+                                left: 50%;
+                                top: 50%;
+                                margin-left: -38px;   
+                                margin-top: -34px;  
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    main{
+        nav{
+            ul{
+                padding-left: 10px;
+                li{
+                    min-width: 50px;
+                    margin: 0 5px 30px 0;
+                    a{
+                        font-size: 9px;
+                        padding: 4px 4px;
+                    }
+                }
+            }
+        }
+    }
+}
+@include media-breakpoint-only(xs) { /* 575px */
     header{
         a{
             .header-content{
@@ -50,8 +89,71 @@
     footer {
         .bio-image {
             float: none;
-            margin: 0 auto;
+            margin: 0 auto;   
+             width: 200px;
+            height: 200px;
+            border-radius: 100px;
         }
     }
 
 }
+
+@include media-breakpoint-only(sm) { 
+    header{
+        a{
+            .header-content{
+                .my-name{
+                    h1{
+                        font-size: 150px;
+                        span{
+                            &::before{
+                                width: 150px;
+                                height: 150px ;    
+                                left: 50%;
+                                top: 50%;
+                                margin-left: -68px;   
+                                margin-top: -64px;  
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    main{
+        padding: 20px 0;
+        nav{
+            ul{
+                margin-left: 15px;
+                li{
+                    min-width: 100px;
+                    margin: 0 5px 30px 5px;
+                    a{
+                        font-size: 16px;
+                        padding: 10px 10px;
+                    }
+                }
+            }
+        }
+        .exemple-box{
+            .box-image{
+                width: 100%;
+                height: auto;
+            }
+            &:hover{
+                position: static;
+                top: 0;
+                box-shadow: none;
+            }
+        }
+    }
+    footer {
+        .bio-image {
+            float: none;
+            margin: 0 auto;   
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+        }
+    }
+ }
