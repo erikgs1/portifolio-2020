@@ -33,27 +33,64 @@ header{
         height: 100vh;
         background-color: $colorTheme;
         height: 100vh;
-        overflow: hidden;
         .button-menu{
             width: 30px;
             height: 30px;
             position: absolute;
             top: 20px;
             left: 20px;
-                .line{
-                    width: 30px;
-                    height: 5px;
-                    border-radius: 5px;
-                    background-color: $black;
-                    position: absolute;
-                }
-                .line-1{
-                    top: 0;
-                }.line-2{
+            z-index: 4;
+            input{
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                z-index: 3;
+                opacity: 0;
+                &:checked ~  .line-1{
+                    transition: 1s;
+                    opacity: 0;
+                  }
+                  
+                  &:checked ~  .line-2{
+                    transform: rotate(45deg);
+                    transition: 1s;
+                  }
+                  
+                  &:checked ~  .line-3{
                     top: 10px;
-                }.line-3{
-                    top: 20px;
-                }
+                    transform: rotate(-45deg);
+                    transition: 0.8s;
+                  }
+            }
+            .line{
+                width: 30px;
+                height: 5px;
+                border-radius: 5px;
+                background-color: $black;
+                position: absolute;
+            }
+            .line-1{
+                transform: rotate(0);
+                transition: 2s;
+            }.line-2{
+                top: 10px;
+                transform: rotate(0);
+                transition: 1s;
+            }.line-3{
+                top: 20px;
+                transform: rotate(0);
+                transition: 1s;
+            }
+        }
+        .main-menu-shadow{
+            width: 100%;
+            height: 100vh;
+            background-color:  $darkColorTheme;
+            opacity: .8;
+            position: absolute;
+            top: 0;
+            display: none;
+            z-index: 3;
         }
         .main-menu{
             width: 300px;
@@ -62,11 +99,12 @@ header{
             top: 0;
             left: 0;
             z-index: 3;
-            display: none;
             ul{
                 width: 100%;
                 height: 100vh;
                 background-color: $secondColorTheme;
+                position: absolute;
+                left: -300px;
                 li{
                     width: 100%;
                     padding: 15px 20px;
@@ -77,16 +115,6 @@ header{
                         background-color: $colorTheme;
                     }
                 }
-            }
-            .main-menu-shadow{
-                width: 100vw;
-                height: 100vh;
-                background-color:  $darkColorTheme;
-                opacity: .8;
-                position: absolute;
-                z-index: -3;
-                top: 0;
-                left: -20px;
             }
         }
         .my-name{
