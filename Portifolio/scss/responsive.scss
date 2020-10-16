@@ -1,43 +1,4 @@
 @import "node_modules/bootstrap/scss/bootstrap";
-
-@media only screen and (max-width: 320px) {
-    header{
-        a{
-            .header-content{
-                .my-name{
-                    h1{
-                        font-size: 80px;
-                        span{
-                            &::before{
-                                width: 80px;
-                                height: 80px ;    
-                                left: 50%;
-                                top: 50%;
-                                margin-left: -38px;   
-                                margin-top: -34px;  
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-    main{
-        nav{
-            ul{
-                padding-left: 10px;
-                li{
-                    min-width: 50px;
-                    margin: 0 5px 30px 0;
-                    a{
-                        font-size: 9px;
-                        padding: 4px 4px;
-                    }
-                }
-            }
-        }
-    }
-}
 @include media-breakpoint-only(xs) { /* 575px */
     header{
         a{
@@ -226,3 +187,42 @@
         }
     }
  }
+ 
+@media only screen and (max-width: 320px) {
+    header{
+        a{
+            .header-content{
+                .my-name{
+                    h1{
+                        font-size: 80px;
+                        span{
+                            &::before{
+                                width: 80px;
+                                height: 80px ;    
+                                left: 50%;
+                                top: 50%;
+                                margin-left: -38px;   
+                                margin-top: -34px;  
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    main{
+        nav{
+            ul{
+                padding-left: 10px;
+                li{
+                    min-width: 50px;
+                    margin: 0 5px 30px 0;
+                    a{
+                        font-size: 9px;
+                        padding: 4px 4px;
+                    }
+                }
+            }
+        }
+    }
+}

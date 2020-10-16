@@ -1,8 +1,19 @@
-// init controller
-var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
 
-// build scenes
-new ScrollMagic.Scene({triggerElement: "#parallax1"})
-    .setTween("#parallax1 > div", {y: "80%", ease: Linear.easeNone})
-    .addIndicators()
-    .addTo(controller);
+var myName = document.getElementById('name');
+var firstLetter =  document.getElementById('span');
+var span = "e";
+var h1 =  " r i k";
+function escrever(str, el) {
+  var char = str.split('').reverse();
+  var typer = setInterval(function() {
+    if (!char.length) return clearInterval(typer);
+    var next = char.pop();
+    el.innerHTML += next;
+  }, 100);
+}
+
+
+escrever(span, firstLetter);
+
+escrever(h1, myName);
+
