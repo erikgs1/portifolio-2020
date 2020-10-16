@@ -1,20 +1,18 @@
 @import "node_modules/bootstrap/scss/bootstrap";
 @include media-breakpoint-only(xs) { /* 575px */
     header{
-        a{
-            .header-content{
-                .my-name{
-                    h1{
-                        font-size: 100px;
-                        span{
-                            &::before{
-                                width: 100px;
-                                height: 100px ;    
-                                left: 50%;
-                                top: 50%;
-                                margin-left: -48px;   
-                                margin-top: -44px;  
-                            }
+        .header-content{
+            .my-name{
+                h1{
+                    font-size: 100px;
+                    span{
+                        &::before{
+                            width: 100px;
+                            height: 100px ;    
+                            left: 50%;
+                            top: 50%;
+                            margin-left: -48px;   
+                            margin-top: -44px;  
                         }
                     }
                 }
@@ -61,20 +59,18 @@
 
 @include media-breakpoint-only(sm) { 
     header{
-        a{
-            .header-content{
-                .my-name{
-                    h1{
-                        font-size: 150px;
-                        span{
-                            &::before{
-                                width: 150px;
-                                height: 150px ;    
-                                left: 50%;
-                                top: 50%;
-                                margin-left: -68px;   
-                                margin-top: -64px;  
-                            }
+        .header-content{
+            .my-name{
+                h1{
+                    font-size: 150px;
+                    span{
+                        &::before{
+                            width: 150px;
+                            height: 150px ;    
+                            left: 50%;
+                            top: 50%;
+                            margin-left: -68px;   
+                            margin-top: -64px;  
                         }
                     }
                 }
@@ -120,20 +116,18 @@
  }
  @include media-breakpoint-only(md) { 
     header{
-        a{
-            .header-content{
-                .my-name{
-                    h1{
-                        font-size: 200px;
-                        span{
-                            &::before{
-                                width: 200px;
-                                height: 200px ;    
-                                left: 50%;
-                                top: 50%;
-                                margin-left: -92px;   
-                                margin-top: -88px;  
-                            }
+        .header-content{
+            .my-name{
+                h1{
+                    font-size: 200px;
+                    span{
+                        &::before{
+                            width: 200px;
+                            height: 200px ;    
+                            left: 50%;
+                            top: 50%;
+                            margin-left: -92px;   
+                            margin-top: -88px;  
                         }
                     }
                 }
@@ -190,20 +184,18 @@
  
 @media only screen and (max-width: 320px) {
     header{
-        a{
-            .header-content{
-                .my-name{
-                    h1{
-                        font-size: 80px;
-                        span{
-                            &::before{
-                                width: 80px;
-                                height: 80px ;    
-                                left: 50%;
-                                top: 50%;
-                                margin-left: -38px;   
-                                margin-top: -34px;  
-                            }
+        .header-content{
+            .my-name{
+                h1{
+                    font-size: 75px;
+                    span{
+                        &::before{
+                            width: 75px;
+                            height: 75px;    
+                            left: 50%;
+                            top: 50%;
+                            margin-left: -35px;   
+                            margin-top: -32px;  
                         }
                     }
                 }
