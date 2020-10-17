@@ -86,10 +86,9 @@ header{
             width: 100%;
             height: 100vh;
             background-color:  $darkColorTheme;
-            opacity: .8;
+            opacity: 0;
             position: absolute;
             top: 0;
-            display: none;
             z-index: 3;
         }
         .main-menu{
@@ -97,22 +96,28 @@ header{
             height: 100vh;
             position: absolute;
             top: 0;
-            left: 0;
             z-index: 3;
+            left: -300px;
             ul{
                 width: 100%;
                 height: 100vh;
                 background-color: $secondColorTheme;
                 position: absolute;
-                left: -300px;
+                float: left;
+                left: 0px;
                 li{
                     width: 100%;
-                    padding: 15px 20px;
-                    color: $white;
-                    background-color: $secondColorTheme;
-                    border-bottom: solid 1px $darkColorTheme;
-                    &:hover{
-                        background-color: $colorTheme;
+                    a{  
+                        width: 100%;
+                        padding: 15px 20px;
+                        float: left;
+                        color: $white;
+                        text-decoration: none;
+                        background-color: $secondColorTheme;
+                        border-bottom: solid 1px $darkColorTheme;
+                        &:hover{
+                            background-color: $colorTheme;
+                        }
                     }
                 }
             }

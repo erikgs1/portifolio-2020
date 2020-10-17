@@ -17,3 +17,17 @@ escrever(span, firstLetter);
 
 escrever(h1, myName);
 
+
+$(".open").click(function() {
+  if($(".main-menu").hasClass("closed")) {
+  $(".main-menu").animate({left: "0px"}).removeClass("closed");
+  $(".button-menu").animate({left: "320px"});
+  $(".main-menu-shadow").animate({opacity: 0.9});
+  }
+    
+  else {
+    $(".main-menu").animate({left: "-300px"}).addClass("closed");
+    $(".button-menu").animate({left: "20px"});
+    $(".main-menu-shadow").animate({opacity:0});  
+    }
+    });
