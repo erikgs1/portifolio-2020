@@ -17,15 +17,16 @@ escrever(span, firstLetter);
 
 escrever(h1, myName);
 
-
-$(".open").click(function() {
-  if($(".main-menu").hasClass("closed")) {
-  $(".main-menu").animate({left: "0px"}).removeClass("closed");
-  $(".button-menu").animate({left: "320px"});
-  }
-    
-  else {
-    $(".main-menu").animate({left: "-300px"}).addClass("closed");
-    $(".button-menu").animate({left: "20px"});
-    }
+(function($){
+    $(".open").click(function() {
+      if($(".main-menu").hasClass("closed")) {
+        $(".main-menu").animate({left: "0px"}).removeClass("closed");
+        $(".button-menu").animate({left: "320px"});
+      }
+        
+      else {
+        $(".main-menu").animate({left: "-300px"}).addClass("closed");
+        $(".button-menu").animate({left: "20px"});
+      }
     });
+  })(jQuery);
