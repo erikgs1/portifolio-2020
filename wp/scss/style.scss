@@ -9,7 +9,6 @@
     box-sizing: border-box;
 }
 
-
 /* Text no select all */
 %no-text-select-all{
     -webkit-touch-callout: none;
@@ -26,6 +25,11 @@
     transform: scaleX(-1);
 }
 /* RESET */
+.logged-in{
+    header{
+        top: 30px;
+    }
+}
 header{
     width: 100%;
     .header-content{
@@ -33,6 +37,7 @@ header{
         height: 100vh;
         background-color: $colorTheme;
         height: 100vh;
+        position: relative;
         .button-menu{
             width: 30px;
             height: 30px;
@@ -182,12 +187,11 @@ main{
             }
         }
     }
-    .exemple-box{
+    .projects{
         margin: 0 0 50px;
         border: solid 2px rgba(245, 245, 245, 1);
         .box-image{
-            width: 251px;
-            height: 255px;
+            width: 100%;
             position: relative;
             text-align: center;
             img{
@@ -197,6 +201,9 @@ main{
         .box-title{
             text-align: center;
             padding: 20px 0;
+            h2{
+                font-size: 16px;
+            }
         }
         &:hover{
             position: absolute;

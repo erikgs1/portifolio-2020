@@ -9,3 +9,8 @@ function load_scripts(){
     
 
 add_action('wp_enqueue_scripts', 'load_scripts');
+
+function portfolio_config(){ 
+    add_theme_support('post-thumbnails' ); 
+} 
+add_action('after_setup_theme', 'portfolio_config', 0);

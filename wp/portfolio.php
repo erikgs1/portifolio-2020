@@ -24,91 +24,30 @@ Template Name: Portfólio
             </nav>
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-12 col-md-6 col-lg-4 col-xl-3 ">
-                        <div class="exemple-box">
-                            <div class="box-image">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/img1.jpg" alt="">
-                            </div>
-                            <div class="box-title">
-                                Exemple
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-xs-12 col-md-6 col-lg-4 col-xl-3 ">
-                        <div class="exemple-box">
-                            <div class="box-image">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/img3.jpg" alt="">
-                            </div>
-                            <div class="box-title">
-                                Exemple
+                    <?php
+                        $projects = new WP_Query('post_type=post&posts_per_page=8');
+                        if(  $projects->have_posts() ):
+                            while(  $projects->have_posts()):  $projects->the_post();
+                            $categories = get_the_category();
+                            $category_id = $categories[0]->cat_ID;
+                    ?>
+                        <div class="col-xs-12 col-md-6 col-lg-4 col-xl-3 <?php echo $categories[0]->cat_name; ?> ">
+                            <div class="projects">
+                                <div class="box-image">
+                                    <?php the_post_thumbnail( 'large', array('class' => 'img-fluid' )); ?>
+                                </div>
+                                <div class="box-title">
+                                    <h2> <?php the_title(); ?> </h2>
+                                </div>
+                                
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xs-12 col-md-6 col-lg-4 col-xl-3 ">
-                        <div class="exemple-box">
-                            <div class="box-image">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/img2.jpg" alt="">
-                            </div>
-                            <div class="box-title">
-                                Exemple
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-xs-12 col-md-6 col-lg-4 col-xl-3 ">
-                        <div class="exemple-box">
-                            <div class="box-image">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/img4.jpg" alt="">
-                            </div>
-                            <div class="box-title">
-                                Exemple
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-xs-12 col-md-6 col-lg-4 col-xl-3 ">
-                        <div class="exemple-box">
-                            <div class="box-image">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/img7.jpg" alt="">
-                            </div>
-                            <div class="box-title">
-                                Exemple
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-xs-12 col-md-6 col-lg-4 col-xl-3 ">
-                        <div class="exemple-box">
-                            <div class="box-image">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/img6.jpg" alt="">
-                            </div>
-                            <div class="box-title">
-                                Exemple
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-xs-12 col-md-6 col-lg-4 col-xl-3 ">
-                        <div class="exemple-box">
-                            <div class="box-image">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/img8.jpg" alt="">
-                            </div>
-                            <div class="box-title">
-                                Exemple
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-md-6 col-lg-4 col-xl-3 ">
-                        <div class="exemple-box">
-                            <div class="box-image">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/img5.jpg" alt="">
-                            </div>
-                            <div class="box-title">
-                                Exemple
-                            </div>
-                        </div>
-                    </div>
+
+                    <?php
+                            endwhile;
+                            wp_reset_postdata();
+                        endif;
+                    ?>
                     
                 </div>
             </div>

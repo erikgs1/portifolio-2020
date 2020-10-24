@@ -6,7 +6,7 @@
     <title>Meu Portifólio</title>
     <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
     <!-- Top -->
     <header>
         <div class="header-content d-flex align-items-center justify-content-center">
