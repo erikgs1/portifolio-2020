@@ -9,17 +9,17 @@ Template Name: Portfólio
 <?php get_header(); ?>
     
     <!-- Main Content -->
-    <main>
+    <main id="main">
         <div class="container-xs container-md ">
             <nav>
                 <ul>
-                    <li><a href="#">Newsletter</a></li>
+                    <li><a class="button-newsletter">Newsletter</a></li>
                     
-                    <li><a href="#">Email Marketing</a></li>
+                    <li><a class="button-email">Email Marketing</a></li>
                     
-                    <li><a href="#">Templates WP</a></li>
+                    <li><a class="button-templates" >Templates WP</a></li>
 
-                    <li><a href="#">Landing Pages</a></li>
+                    <li><a class="button-landing">Landing Pages</a></li>
                 </ul>
             </nav>
             <div class="container">

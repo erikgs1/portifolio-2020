@@ -170,6 +170,7 @@ main{
                 margin: 0  10px 50px 0 ;
                 
                 a{
+                    @extend %no-text-select-all;
                     color: $white;
                     background-color: $colorTheme;
                     border-radius: 3px;

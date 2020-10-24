@@ -1,6 +1,6 @@
 
     <!-- Footer -->
-    <footer>
+    <footer id="about">
         <div class="container">
              <!-- Biography -->
             <div class="row">

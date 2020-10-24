@@ -19,9 +19,9 @@
             <!-- Main Menu -->
             <nav class="main-menu closed">
                 <ul>
-                    <li><a href="#">Projetos</a></li>
+                    <li><a href="#main" class="anchor-scroll" data-class-to="#main" data-on-scroll="blur-effect">Projetos</a></li>
                     
-                    <li><a href="#">Sobre mim</a></li>
+                    <li><a href="#about" class="anchor-scroll" data-class-to="#about" data-scroll-end="bounce">Sobre mim</a></li>
                     
                 </ul>
             </nav>
