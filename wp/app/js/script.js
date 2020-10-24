@@ -29,4 +29,24 @@ escrever(h1, myName);
         $(".button-menu").animate({left: "20px"});
       }
     });
+
+    $(".button-newsletter").click(function(){
+      $('.projects-container .row > div').hide()
+      $('.projects-container .newsletter').fadeIn(1000)
+    });
+
+    $(".button-email").click(function(){
+      $('.projects-container .row > div').hide()
+      $('.projects-container .email-marketing').fadeIn(1000)
+    });
+
+    $(".button-templates").click(function(){
+      $('.projects-container .row > div').hide()
+      $('.projects-container .templates-wp').fadeIn(1000)
+    });
+
+    $(".button-landing").click(function(){
+      $('.projects-container .row > div').hide()
+      $('.projects-container .landing-pages').fadeIn(1000)
+    });
   })(jQuery);
