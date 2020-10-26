@@ -71,7 +71,7 @@ header{
                 width: 30px;
                 height: 5px;
                 border-radius: 5px;
-                background-color: $black;
+                background-color: $white;
                 position: absolute;
             }
             .line-1{
@@ -194,25 +194,29 @@ main{
         .projects{
             margin: 0 0 50px;
             border: solid 2px rgba(245, 245, 245, 1);
-            .box-image{
-                width: 100%;
-                position: relative;
-                text-align: center;
-                img{
-                    max-width: 100%;
+            a{
+                text-decoration: none;
+                color: $black;
+                .box-image{
+                    width: 100%;
+                    position: relative;
+                    text-align: center;
+                    img{
+                        max-width: 100%;
+                    }
                 }
-            }
-            .box-title{
-                text-align: center;
-                padding: 20px 0;
-                h2{
-                    font-size: 16px;
+                .box-title{
+                    text-align: center;
+                    padding: 20px 0;
+                    h2{
+                        font-size: 16px;
+                    }
                 }
-            }
-            &:hover{
-                position: absolute;
-                top: -20px;
-                box-shadow: 0 10px 25px -20px rgba(000, 000, 000, 0.5);
+                &:hover{
+                    position: absolute;
+                    top: -20px;
+                    box-shadow: 0 10px 25px -20px rgba(000, 000, 000, 0.5);
+                }
             }
         }
     }

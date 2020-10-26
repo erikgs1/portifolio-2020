@@ -31,16 +31,19 @@ Template Name: Portfólio
                                 while(  $projects->have_posts()):  $projects->the_post();
                                 $categories = get_the_category();
                                 $category_id = $categories[0]->cat_ID;
+                                $post_id = get_the_ID();
+                                $post_link =  get_permalink($post_id);
                         ?>
                             <div class="col-xs-12 col-md-6 col-lg-4 col-xl-3 <?php echo $categories[0]->cat_name; ?> ">
                                 <div class="projects">
-                                    <div class="box-image">
-                                        <?php the_post_thumbnail( 'large', array('class' => 'img-fluid' )); ?>
-                                    </div>
-                                    <div class="box-title">
-                                        <h2> <?php the_title(); ?> </h2>
-                                    </div>
-                                    
+                                    <a href="<?php echo $post_link?>" target="_blank">
+                                        <div class="box-image">
+                                            <?php the_post_thumbnail( 'large', array('class' => 'img-fluid' )); ?>
+                                        </div>
+                                        <div class="box-title">
+                                            <h2> <?php the_title(); ?> </h2>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
 

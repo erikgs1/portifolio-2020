@@ -1,14 +1,10 @@
 <?php get_header(); ?>
-    <main class="main-background" style="background-image:url(<?php echo $thumb_url ?>)">
+    <main id="main" class="main-background" style="background-image:url(<?php echo $thumb_url ?>)">
         <div class="container"> 
             <div class="row">
-                <!-- Espaço em branco background -->
-                <div class=" col-md-4">
-                </div>
-                <!-- // Espaço em branco background -->
                 <!-- Conteudo -->
-                <div class=" col-md-8">
-                    <div>
+                <div class=" col-12">
+                    <div class="mb-5">
                         <h1><?php echo the_title() ?></h1>
                     </div>  
                     <?php
