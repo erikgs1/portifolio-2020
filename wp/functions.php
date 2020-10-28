@@ -11,6 +11,29 @@ function load_scripts(){
 add_action('wp_enqueue_scripts', 'load_scripts');
 
 function portfolio_config(){ 
+    register_nav_menus(
+        array(
+            'my_main_menu' => 'Main Menu'
+        )
+    );
     add_theme_support('post-thumbnails' ); 
+    add_theme_support('align-wide' ); 
 } 
 add_action('after_setup_theme', 'portfolio_config', 0);
+
+function portfolio_widgets_init() {
+
+	register_sidebar(
+		array(
+			'name'          => __( 'About Me' ),
+			'id'            => 'about-1',
+			'description'   => __( 'Add widgets here to appear in my footer.'),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+
+}
+add_action( 'widgets_init', 'portfolio_widgets_init' );

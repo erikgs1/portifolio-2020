@@ -1,9 +1,9 @@
 <?php get_header(); ?>
-    <main id="main" class="main-background" style="background-image:url(<?php echo $thumb_url ?>)">
+    <main>
         <div class="container"> 
             <div class="row">
                 <!-- Conteudo -->
-                <div class=" col-12">
+                <div class=" col-12 text-center">
                     <div class="mb-5">
                         <h1><?php echo the_title() ?></h1>
                     </div>  
@@ -17,6 +17,7 @@
                                 the_content();
                             ?>
                         </div>
+			            <p class="tags"><?php the_tags( '', ''); ?></p>		
                     <?php 
                         endwhile; // End the loop.
                     ?>

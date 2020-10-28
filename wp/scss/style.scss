@@ -220,6 +220,14 @@ main{
             }
         }
     }
+    .tags{
+        a{
+            padding: 20px;
+            margin-right: 10px;
+            background-color: $secondColorTheme;
+            border-radius: 10px;
+        }
+    }
 }
 
 
