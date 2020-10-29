@@ -26,7 +26,7 @@ Template Name: Portfólio
                 <div class="projects-container">
                     <div class="row">
                         <?php
-                            $projects = new WP_Query('post_type=post&posts_per_page=8');
+                            $projects = new WP_Query('post_type=post');
                             if(  $projects->have_posts() ):
                                 while(  $projects->have_posts()):  $projects->the_post();
                                 $categories = get_the_category();

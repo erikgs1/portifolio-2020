@@ -212,11 +212,10 @@ main{
                         font-size: 16px;
                     }
                 }
-                &:hover{
-                    position: absolute;
-                    top: -20px;
-                    box-shadow: 0 10px 25px -20px rgba(000, 000, 000, 0.5);
-                }
+            }
+            &:hover{
+                margin-top: -20px;
+                box-shadow: 0 10px 25px -20px rgba(000, 000, 000, 0.5);
             }
         }
     }
