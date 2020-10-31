@@ -32,16 +32,16 @@ Template Name: Portfólio
                                 $categories = get_the_category();
                                 $category_id = $categories[0]->cat_ID;
                                 $post_id = get_the_ID();
-                                $post_link =  get_permalink($post_id);
+                                $post_link =  get_permalink($post_id); 
                         ?>
                             <div class="col-xs-12 col-md-6 col-lg-4 col-xl-3 <?php echo $categories[0]->cat_name; ?> ">
                                 <div class="projects">
                                     <a href="<?php echo $post_link?>">
                                         <div class="box-image">
-                                            <?php the_post_thumbnail( 'large', array('class' => 'img-fluid' )); ?>
+                                            <?php the_post_thumbnail( 'large', array('class' => 'img-fluid' ));                                             ?>
                                         </div>
                                         <div class="box-title">
-                                            <h2> <?php the_title(); ?> </h2>
+                                            <h2> <?php the_title();?> </h2>
                                         </div>
                                     </a>
                                 </div>

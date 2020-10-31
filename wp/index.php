@@ -1,32 +1,54 @@
 <?php get_header(); ?>
-    <main class="main-background" style="background-image:url(<?php echo $thumb_url ?>)">
-        <div class="container"> 
-            <div class="row">
-                <!-- Espaço em branco background -->
-                <div class=" col-md-4">
+    
+    <!-- Main Content -->
+    <main id="main">
+        <div class="container-xs container-md ">
+            <nav>
+                <ul>
+                    <li><a class="button-newsletter">Newsletter</a></li>
+                    
+                    <li><a class="button-email">Email Marketing</a></li>
+                    
+                    <li><a class="button-templates" >Templates WP</a></li>
+
+                    <li><a class="button-landing">Landing Pages</a></li>
+                </ul>
+            </nav>
+            <div class="container">
+                <div class="projects-container">
+                    <div class="row">
+                        <?php
+                            $projects = new WP_Query('post_type=post');
+                            if(  $projects->have_posts() ):
+                                while(  $projects->have_posts()):  $projects->the_post();
+                                $categories = get_the_category();
+                                $category_id = $categories[0]->cat_ID;
+                                $post_id = get_the_ID();
+                                $post_link =  get_permalink($post_id); 
+                                $slug = get_post_field( 'post_name', get_post() );
+                        ?>
+                            <div class="col-xs-12 col-md-6 col-lg-4 col-xl-3 <?php echo $slug; ?> ">
+                                <div class="projects">
+                                    <a href="<?php echo $post_link?>">
+                                        <div class="box-image">
+                                            <?php the_post_thumbnail( 'large', array('class' => 'img-fluid' ));                                             ?>
+                                        </div>
+                                        <div class="box-title">
+                                            <h2> <?php the_title();?> </h2>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        <?php
+                                endwhile;
+                                wp_reset_postdata();
+                            endif;
+                        ?>
+                    </div>
                 </div>
-                <!-- // Espaço em branco background -->
-                <!-- Conteudo -->
-                <div class=" col-md-8">
-                    <div>
-                        <h1><?php echo the_title() ?></h1>
-                    </div>  
-                    <?php
-                        // Start the Loop.
-                        while ( have_posts() ) :
-                            the_post();
-                    ?>
-                        <div>
-                            <?php
-                                the_content();
-                            ?>
-                        </div>
-                    <?php 
-                        endwhile; // End the loop.
-                    ?>
-                </div>
-                <!-- Conteudo -->
             </div>
-        </div>   
+        </div>
     </main>
-<?php get_footer(); ?>
+    <!-- //Main Content -->
+    <?php get_footer(); ?>
+

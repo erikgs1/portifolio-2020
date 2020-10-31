@@ -12,10 +12,10 @@
                         while ( have_posts() ) :
                             the_post();
                     ?>
-                        <div>
+                        <div class="project-body">
                             <?php
-                                the_content();
-                                the_category( '', '');
+                                the_content(); 
+                                the_tags( '', '');
                             ?>
                         </div>
                     <?php 
