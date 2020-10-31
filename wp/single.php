@@ -15,9 +15,9 @@
                         <div>
                             <?php
                                 the_content();
+                                the_category( '', '');
                             ?>
                         </div>
-			            <p class="tags"><?php the_tags( '', ''); ?></p>		
                     <?php 
                         endwhile; // End the loop.
                     ?>

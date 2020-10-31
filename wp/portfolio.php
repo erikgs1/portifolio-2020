@@ -36,7 +36,7 @@ Template Name: Portfólio
                         ?>
                             <div class="col-xs-12 col-md-6 col-lg-4 col-xl-3 <?php echo $categories[0]->cat_name; ?> ">
                                 <div class="projects">
-                                    <a href="<?php echo $post_link?>" target="_blank">
+                                    <a href="<?php echo $post_link?>">
                                         <div class="box-image">
                                             <?php the_post_thumbnail( 'large', array('class' => 'img-fluid' )); ?>
                                         </div>
@@ -46,7 +46,6 @@ Template Name: Portfólio
                                     </a>
                                 </div>
                             </div>
-
                         <?php
                                 endwhile;
                                 wp_reset_postdata();
